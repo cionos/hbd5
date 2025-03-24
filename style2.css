@@ -1,0 +1,154 @@
+/* 🌆 背景完整显示，可滚动 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑", sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+/* 🎆 粒子背景 */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* 🎁 生日祝福框 */
+.container {
+    position: relative;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 50px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🎶 播放按钮 */
+.vintage-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: #ff4081;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.vintage-button:hover {
+    background: #d81b60;
+}
+
+/* 📸 照片墙 */
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.photo-gallery img {
+    width: 150px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* 🎠 轮播图 */
+.slideshow-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.slide {
+    display: none;
+}
+
+.fade {
+    animation: fade 1.5s ease-in-out;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+/* ❤️ 点赞按钮 */
+#like-btn {
+    display: block;
+    margin: 20px auto;
+}
+
+/* 🎆 弹幕 */
+#danmu-container {
+    position: fixed;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.danmu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    animation: danmu-move 5s linear forwards, fadeOut 1s ease-out 4s;
+}
+
+@keyframes danmu-move {
+    from { left: 100%; }
+    to { left: -100%; }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+/* 💬 在线聊天室 */
+#chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+}
+
+#chat-box-container {
+    display: none;
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#chat-box {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#chat-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
